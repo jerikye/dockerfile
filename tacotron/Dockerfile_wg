@@ -1,0 +1,12 @@
+FROM registry.cn-shenzhen.aliyuncs.com/tsinghua_gd/tts:V1.5
+LABEL maintainer Jerik "carter7777@qq.com"
+
+RUN pip3 --no-cache-dir install \
+		keras \
+		torch \
+		webrtcvad 
+
+
+RUN git clone https://www.github.com/nvidia/apex
+WORKDIR apex
+RUN python3 setup.py install
