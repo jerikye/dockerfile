@@ -8,7 +8,7 @@ RUN pip3 --no-cache-dir install \
 
 RUN apt-get update
 
-RUN apt-get install -y libespeak-dev
+RUN apt-get install -y libespeak-dev ffmpeg
 
 RUN pip3 install \
     aeneas \
