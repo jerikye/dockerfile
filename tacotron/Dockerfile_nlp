@@ -1,5 +1,5 @@
 
-FROM registry.cn-shenzhen.aliyuncs.com/jerikye/tacotron:v1
+FROM registry.cn-shenzhen.aliyuncs.com/jerik/tacotron:v1
 LABEL maintainer Jerik "carter7777@qq.com"
 
 RUN pip3 --no-cache-dir install \
