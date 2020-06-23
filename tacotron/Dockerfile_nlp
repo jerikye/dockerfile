@@ -7,6 +7,6 @@ RUN pip3 --no-cache-dir install \
 
 RUN python -m spacy download en_core_web_sm
 
-pip pip3 --no-cache-dir install \
+RUN pip3 --no-cache-dir install \
     neuralcoref \
     textacy
