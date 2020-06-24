@@ -1,12 +1,23 @@
-
-FROM registry.cn-shenzhen.aliyuncs.com/jerik/tacotron:v1
+FROM registry.cn-shenzhen.aliyuncs.com/tsinghua_gd/tts:V1.5
 LABEL maintainer Jerik "carter7777@qq.com"
 
 RUN pip3 --no-cache-dir install \
-		spacy
+		keras==2.3.1 \
+		torch==1.3.1 \
+		webrtcvad==2.0.10
 
-RUN python -m spacy download en_core_web_sm
+RUN apt-get update
 
-RUN pip3 --no-cache-dir install \
+RUN apt-get install -y libespeak-dev ffmpeg
+
+RUN pip3 install \
+    aeneas \
+    pydub \
+    jieba \
+    recognizers-text-suite \
+    spacy \
     neuralcoref \
-    textacy
+    textacy    
+
+# RUN 
+# WORKDIR 
