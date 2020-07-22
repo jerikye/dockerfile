@@ -1,4 +1,4 @@
-FROM registry.cn-shenzhen.aliyuncs.com/jerik/tts:test
+FROM registry.cn-shenzhen.aliyuncs.com/jerik/tts:base
 # 非root用户
 RUN groupadd --gid 5000 cyagen \
     && useradd --home-dir /home/cyagen --create-home --uid 5000 \
