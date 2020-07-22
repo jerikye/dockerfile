@@ -4,3 +4,9 @@ FROM registry.cn-shenzhen.aliyuncs.com/jerik/tacotron:base
 #     && useradd --home-dir /home/cyagen --create-home --uid 5000 \
 #         --gid 5000 --shell /bin/sh --skel /dev/null cyagen
 # USER cyagen
+
+RUN pip --no-cache-dir install \
+        jupyter_contrib_nbextensions
+		
+RUN jupyter contrib nbextension install --user
+RUN jupyter nbextension enable codefolding/main
