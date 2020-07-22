@@ -1,4 +1,4 @@
-FROM registry.cn-shenzhen.aliyuncs.com/jerik/tacotron:V5
+FROM registry.cn-shenzhen.aliyuncs.com/jerik/tacotron:v2
 LABEL maintainer Jerik "carter7777@qq.com"
 
 
