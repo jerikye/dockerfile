@@ -7,7 +7,12 @@ RUN pip3 --no-cache-dir install \
 	pandas==0.24.2 \
 	xlrd==1.2.0 \
 	numba==0.48.0 \
-	openpyxl
+	openpyxl \
+	xlwt \
+	umap-learn \
+	Pillow \
+	opencv-python \
+	scikit-image
 
 RUN pip --no-cache-dir install \
         jupyter_contrib_nbextensions
