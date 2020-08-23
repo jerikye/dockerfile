@@ -1,4 +1,4 @@
-FROM registry.cn-shenzhen.aliyuncs.com/tsinghua_gd/tts:v1.0
+FROM registry.cn-shenzhen.aliyuncs.com/tsinghua_gd/tts:V1.0
 LABEL maintainer Jerik "carter7777@qq.com"
 
 RUN pip3 --no-cache-dir install \
