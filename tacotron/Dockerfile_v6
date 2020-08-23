@@ -1,0 +1,4 @@
+FROM registry.cn-shenzhen.aliyuncs.com/jerik/tacotron:v5
+LABEL maintainer Jerik "carter7777@qq.com"
+
+RUN pip3 --no-cache-dir install tensorflow-gpu==1.10.0
