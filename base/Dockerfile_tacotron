@@ -61,7 +61,7 @@ RUN pip --no-cache-dir install spacy==2.2.0
 RUN pip --no-cache-dir install neuralcoref 
 RUN pip --no-cache-dir install textacy 
 RUN pip --no-cache-dir install 	xlrd==1.2.0 
-RUN pip --no-cache-dir install 	numba==0.48.0 
+RUN pip --no-cache-dir install 	numba 
 RUN pip --no-cache-dir install 	openpyxl
 
 RUN pip --no-cache-dir install \
