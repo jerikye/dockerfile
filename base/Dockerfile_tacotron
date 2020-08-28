@@ -51,17 +51,19 @@ RUN pip --no-cache-dir install \
         pypinyin \
         pydub \
         sounddevice \
-		pyaudio \
+	pyaudio \
         falcon \
         inflect \
         aeneas \
-        recognizers-text-suite \
-        spacy\
+        recognizers-text-suite 
+	
+        #spacy\
+RUN pip --no-cache-dir install \
         neuralcoref \
         textacy \
-		xlrd==1.2.0 \
-		numba==0.48.0 \
-		openpyxl
+	xlrd==1.2.0 \
+	numba==0.48.0 \
+	openpyxl
 
 RUN pip --no-cache-dir install \
 		tensorflow-gpu\
