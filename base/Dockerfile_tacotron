@@ -57,13 +57,12 @@ RUN pip --no-cache-dir install \
         aeneas \
         recognizers-text-suite 
 	
-        #spacy\
-RUN pip --no-cache-dir install \
-        neuralcoref \
-        textacy \
-	xlrd==1.2.0 \
-	numba==0.48.0 \
-	openpyxl
+RUN pip --no-cache-dir install spacy==2.2.0
+RUN pip --no-cache-dir install neuralcoref 
+RUN pip --no-cache-dir install textacy 
+RUN pip --no-cache-dir install 	xlrd==1.2.0 
+RUN pip --no-cache-dir install 	numba==0.48.0 
+RUN pip --no-cache-dir install 	openpyxl
 
 RUN pip --no-cache-dir install \
 		tensorflow-gpu\
