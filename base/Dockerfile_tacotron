@@ -55,14 +55,13 @@ RUN pip --no-cache-dir install \
         falcon \
         inflect \
         aeneas \
-        recognizers-text-suite 
-	
-RUN pip --no-cache-dir install spacy==2.2.0
-RUN pip --no-cache-dir install neuralcoref 
-RUN pip --no-cache-dir install textacy 
-RUN pip --no-cache-dir install 	xlrd==1.2.0 
-RUN pip --no-cache-dir install 	numba 
-RUN pip --no-cache-dir install 	openpyxl
+        recognizers-text-suite \
+        spacy==2.2.0
+        neuralcoref \
+        textacy \
+        xlrd==1.2.0 \
+        numba \
+        openpyxl
 
 RUN pip --no-cache-dir install \
 		tensorflow-gpu\
