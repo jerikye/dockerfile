@@ -1,4 +1,5 @@
-FROM nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04
+# FROM nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04
+FROM nvcr.io/nvidia/pytorch:20.08-py3
 LABEL maintainer Jerik "carter7777@qq.com"
 
 # Install dependencies
@@ -63,9 +64,8 @@ RUN pip --no-cache-dir install \
 		openpyxl
 
 RUN pip --no-cache-dir install \
-		tensorflow-gpu==1.15.0\
-		keras==2.3.1 \
-		torch==1.6.0 \
+		tensorflow-gpu\
+		keras\
 		webrtcvad==2.0.10
 
 # 安装服务常用包
