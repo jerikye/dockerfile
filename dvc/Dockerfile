@@ -8,11 +8,11 @@ RUN python -m pip install --upgrade pip
 RUN pip install -U setuptools
 
 RUN pip --no-cache-dir install \
-	tensorflow-gpu >= 1.8 \
-	numpy >= 1.11.1 \
-	librosa == 0.5.1 \
-	joblib == 0.11.0 \
-	tensorpack == 0.8.6 \
+	tensorflow-gpu>=1.8 \
+	numpy>=1.11.1 \
+	librosa==0.5.1 \
+	joblib==0.11.0 \
+	tensorpack==0.8.6 \
 	pyyaml \
 	soundfile \
 	pydub \
