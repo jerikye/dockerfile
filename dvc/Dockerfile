@@ -2,12 +2,12 @@ FROM wywdoc/py27tf17
 LABEL maintainer Jerik "carter7777@qq.com"
 
 # pip 升级
-RUN python3 -m pip install --upgrade pip
+RUN python -m pip install --upgrade pip
 
 # 安装基础库
 RUN pip install -U setuptools
 
-RUN pip3 --no-cache-dir install \
+RUN pip --no-cache-dir install \
 	tensorflow-gpu >= 1.8 \
 	numpy >= 1.11.1 \
 	librosa == 0.5.1 \
