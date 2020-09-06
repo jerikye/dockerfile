@@ -1,11 +1,22 @@
-FROM wywdoc/py27tf17
+
+  
+FROM tensorflow/tensorflow:1.8.0-gpu
 LABEL maintainer Jerik "carter7777@qq.com"
 
+RUN apt-get update -y && apt-get install -y \
+  sox \
+  libsndfile1-dev \
+  git \
+  ffmpeg \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
+
+
 # pip 升级
-RUN python -m pip install --upgrade pip
+# RUN python -m pip install --upgrade pip
 
 # 安装基础库
-RUN pip install -U setuptools
+# RUN pip install -U setuptools
 
 RUN pip --no-cache-dir install \
 	tensorflow-gpu>=1.8 \
@@ -17,7 +28,6 @@ RUN pip --no-cache-dir install \
 	soundfile \
 	pydub \
 	tqdm
-
 
 RUN pip --no-cache-dir install \
 		jupyterlab \
