@@ -13,10 +13,10 @@ RUN apt-get update -y && apt-get install -y \
 
 
 # pip 升级
-# RUN python -m pip install --upgrade pip
+RUN python -m pip install --upgrade pip
 
 # 安装基础库
-# RUN pip install -U setuptools
+RUN pip install -U setuptools
 
 RUN pip --no-cache-dir install \
 	tensorflow-gpu>=1.8 \
