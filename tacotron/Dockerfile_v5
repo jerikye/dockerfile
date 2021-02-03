@@ -16,7 +16,11 @@ RUN pip3 --no-cache-dir install \
 	fastapi \
         minio \
         uvicorn \
-	ipywidgets
+	ipywidgets \
+	pysrt \
+	googletrans==4.0.0rc1 \
+	pyssml \
+	moviepy 
 
 RUN pip --no-cache-dir install \
         jupyter_contrib_nbextensions
