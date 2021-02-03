@@ -12,7 +12,11 @@ RUN pip3 --no-cache-dir install \
 	umap-learn \
 	Pillow \
 	opencv-python \
-	scikit-image
+	scikit-image \
+	fastapi \
+        minio \
+        uvicorn \
+	ipywidgets
 
 RUN pip --no-cache-dir install \
         jupyter_contrib_nbextensions
