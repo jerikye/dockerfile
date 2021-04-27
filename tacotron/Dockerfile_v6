@@ -1,44 +1,37 @@
-FROM registry.cn-shenzhen.aliyuncs.com/tsinghua_gd/tts:V1.0
+FROM registry.cn-shenzhen.aliyuncs.com/jerik/tacotron:v5
 LABEL maintainer Jerik "carter7777@qq.com"
 
 RUN pip3 --no-cache-dir install \
-		keras==2.2.4 \
-		torch==1.3.1 \
-		webrtcvad==2.0.10
-
-RUN apt-get update
-
-RUN apt-get install -y libespeak-dev ffmpeg
-
-RUN pip3 install \
-    aeneas \
-    pydub \
-    jieba \
-    recognizers-text-suite \
-    spacy \
-    neuralcoref \
-    textacy    
-
-RUN pip3 --no-cache-dir install \
-	pandas==0.24.2 \
-	xlrd==1.2.0 \
-	numba \
-	openpyxl \
-	xlwt \
-	umap-learn \
-	Pillow \
-	opencv-python \
-	scikit-image
+		torch==1.7.0
 
 RUN pip --no-cache-dir install \
-        jupyter_contrib_nbextensions
-		
-RUN mkdir nohup
-RUN jupyter notebook --generate-config			
-RUN jupyter contrib nbextension install --user
-RUN jupyter nbextension enable codefolding/main
+  phonemizer \
+  epitran \
+  fastdtw \
+  pinyin \
+  seaborn \
+  romkan \
+  mecab-python3 \
+  unidic-lite \
+  pykakasi \
+  phkit \
+  aukit \
+  pyworld
 
-ENV LC_ALL C.UTF-8
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US:en
-ENV TERM screen
+RUN apt-get update && apt-get install -y festival espeak-ng mbrola
+RUN pip --no-cache-dir install \
+  librosa==0.7.0 \
+  websocket==0.2.1 \
+  websocket-client==0.56.0 \
+  pymysql \
+  redis \
+  enchant \
+  langid \
+  num2words \
+  sqlalchemy \
+  mysql-connector \
+  tqdm==4.56.0 
+RUN rm -rf /var/lib/apt/lists/*
+
+# 解决时区问题
+ENV TZ "Asia/Shanghai"	
