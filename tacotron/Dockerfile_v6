@@ -32,4 +32,4 @@ RUN rm -rf /var/lib/apt/lists/*
 # 解决时区问题
 ENV TZ "Asia/Shanghai"	
 
-RUN pip3 --no-cache-dir install torch==1.7.0+cu101 torchvision==0.8.0+cu101 torchaudio==0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
+RUN pip3 --no-cache-dir install torch==1.7.0+cu101 torchvision==0.8.0+cu101 torchaudio==0.7.0
