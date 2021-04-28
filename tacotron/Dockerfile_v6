@@ -1,7 +1,7 @@
 FROM registry.cn-shenzhen.aliyuncs.com/jerik/tacotron:v5
 LABEL maintainer Jerik "carter7777@qq.com"
 
-RUN pip3 --no-cache-dir install torch==1.7.0
+# RUN pip3 --no-cache-dir install torch==1.7.0
 
 RUN pip --no-cache-dir install \
   phonemizer \
