@@ -11,7 +11,7 @@ RUN pip --no-cache-dir install \
 	scipy==1.0.0 \
 	tensorboardX==1.1 \
 	Unidecode==1.0.22 \
-	pillow
+	pillow -i https://pypi.tuna.tsinghua.edu.cn/simple
 	
 RUN rm -rf /var/lib/apt/lists/*
 
