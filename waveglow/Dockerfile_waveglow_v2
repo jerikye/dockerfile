@@ -11,10 +11,9 @@ RUN pip --no-cache-dir install \
 	scipy==1.2.1 \
 	tensorboardX==1.9 \
 	Unidecode==1.1.1 \
-	pillow==5.4.1
+	pillow -i https://pypi.tuna.tsinghua.edu.cn/simple
 	
 RUN rm -rf /var/lib/apt/lists/*
 
-RUN git clone https://github.com/NVIDIA/apex
-WORKDIR /apex/ 
-RUN pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" .
+# RUN git clone https://github.com/NVIDIA/apex
+# RUN pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./apex
