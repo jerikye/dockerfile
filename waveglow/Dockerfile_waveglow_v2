@@ -4,13 +4,15 @@ LABEL maintainer Jerik "carter7777@qq.com"
 
   
 RUN pip --no-cache-dir install \
-	matplotlib==3.0.3
-	numpy==1.16.2
-	inflect==2.1.0
-	librosa==0.7.0
-	scipy==1.2.1
-	tensorboardX==1.9
-	Unidecode==1.1.1
+	matplotlib==3.0.3 \
+	numpy==1.16.2 \
+	inflect==2.1.0 \
+	librosa==0.7.0 \
+	scipy==1.2.1 \
+	tensorboardX==1.9 \
+	Unidecode==1.1.1 \
 	pillow==5.4.1
 	
 RUN rm -rf /var/lib/apt/lists/*
+
+
