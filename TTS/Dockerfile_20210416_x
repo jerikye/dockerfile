@@ -1,0 +1,9 @@
+From registry.cn-shenzhen.aliyuncs.com/jerik/tts:a100_20210319
+LABEL maintainer Jerik "carter7777@qq.com"
+
+RUN apt-get update && apt-get install -y festival espeak-ng mbrola
+RUN pip --no-cache-dir install \
+  sqlalchemy \
+  mysql-connector \
+  tqdm==4.56.0 
+RUN rm -rf /var/lib/apt/lists/*
