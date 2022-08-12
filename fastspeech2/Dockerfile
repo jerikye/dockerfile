@@ -3,8 +3,8 @@ LABEL maintainer Jerik "carter7777@qq.com"
 
 
 RUN pip --no-cache-dir install \
-		pyworld== 0.2.10 \
-		tgt == 1.4.4
+		pyworld==0.2.10 \
+		tgt==1.4.4
 
 RUN python3 -m pip install paddlepaddle-gpu==2.3.1
 
