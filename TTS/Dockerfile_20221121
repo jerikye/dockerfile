@@ -1,0 +1,10 @@
+
+From registry.cn-shenzhen.aliyuncs.com/jerik/tts:a100_20210531
+LABEL maintainer Jerik "carter7777@qq.com"
+
+RUN pip --no-cache-dir install \
+  torch_struct \
+  transformers \
+  pytokenizations==0.7.2
+
+RUN rm -rf /var/lib/apt/lists/*
