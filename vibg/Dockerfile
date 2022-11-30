@@ -31,8 +31,7 @@ ENV TERM xterm
 # 解决时区问题
 ENV TZ "Asia/Shanghai"	  		
 		
-		
 RUN mkdir nohup
-RUN jupyter notebook --generate-config			
-RUN jupyter contrib nbextension install --user
-RUN jupyter nbextension enable codefolding/main
+# RUN jupyter notebook --generate-config			
+# RUN jupyter contrib nbextension install --user
+# RUN jupyter nbextension enable codefolding/main
