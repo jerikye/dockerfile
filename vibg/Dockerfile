@@ -1,26 +1,24 @@
 From nvcr.io/nvidia/pytorch:22.08-py3
 LABEL maintainer Jerik "carter7777@qq.com"
 
+# RUN conda config --add channels conda-forge  
+# RUN conda install montreal-forced-aligner  
+# RUN conda update -c conda-forge kaldi 
 
-
-RUN conda config --add channels conda-forge  
-RUN conda install montreal-forced-aligner  
-RUN conda update -c conda-forge kaldi 
-
-RUN pip3 --no-cache-dir install \
+RUN pip --no-cache-dir install \
 		torch \
 		torchvision \
 		torchaudio	\
+		torch-struct
+
+RUN pip --no-cache-dir install \		
 		librosa==0.9.2	\
-		numba==0.56.0	\
-		numpy==1.19.5	\
 		nltk==3.7	\
 		pandas==1.2.5	\
 		pytokenizations==0.7.2	\
 		scikit-learn==0.19.2	\
 		scipy==1.7.0	\
 		seaborn==0.11.1	\
-		torch-struct	\
 		transformers==4.3.0	\
 		transliterate==1.10.2
 
