@@ -5,6 +5,8 @@ LABEL maintainer Jerik "carter7777@qq.com"
 RUN pip --no-cache-dir install \
   torch_struct \
   transformers \
-  pytokenizations==0.7.2
+  pytokenizations==0.7.2 \
+  pypinyin_dict \
+  tencentcloud-sdk-python
 
 RUN rm -rf /var/lib/apt/lists/*
